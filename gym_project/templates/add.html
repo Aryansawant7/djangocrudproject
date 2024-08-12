@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="">Home</a>
+    <a href="/add">add</a>
+    <a href="/view">view</a>
+    <h1>ADD CUSTOMERS</h1>
+
+    <form action="/save" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name"></td>
+            </tr>
+            <tr>
+                <td>Plan</td>
+                <td><input type="text" name="Plan"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="text" name="Price"></td>
+            </tr>
+            <tr>
+                <td>Training</td>
+                <td><input type="text" name="Training"></td>
+            </tr>
+        </table><br>
+        <button>Click Here</button>
+    </form>
+</body>
+</html>

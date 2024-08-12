@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>View Customers</h1>
+    <table border="2">
+        <tr>
+            <th>Srno</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for i in gym %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.plan}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.training}}</td>
+
+            <td>
+            <a href="/update/{{i.id}}">Update</a>
+            <a href="/delete/{{i.id}}">Delete</a>
+        </td>
+        </tr>
+        
+                                    
+        {% endfor %}
+    </table>
+</body>
+
+</html>
